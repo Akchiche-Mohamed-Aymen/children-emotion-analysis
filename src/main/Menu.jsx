@@ -6,11 +6,14 @@ import { IoMdPersonAdd } from "react-icons/io";
 import { IoMdAdd } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
 import { useAppContext } from "@/context/AppContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Menu() {
     const {index, setIndex} = useAppContext()
+    const navigate = useNavigate()
+
   return (
-    <div className="w-72 h-screen flex flex-col justify-between p-3">
+    <div className="w-72  h-screen fixed top-0 right-0 flex flex-col justify-between p-3">
       <div>
         <Logo />
         <div className="flex select  flex-col gap-2 border-b-2 border-dashed ">
@@ -20,7 +23,7 @@ export default function Menu() {
           <button onClick={()=>setIndex(2)} className={ index == 2 && "selected"}>
             ادارة الأطفال <MdOutlineManageAccounts />
           </button>
-          <button onClick={()=>setIndex(3)} className={ index == 3 && "selected"}>
+          <button onClick={()=>{setIndex(3) ; navigate("/recommandations")}} className={ index == 3 && "selected"}>
             التوصيات المقترحة <BsStars />
           </button>
         </div>
@@ -34,8 +37,9 @@ export default function Menu() {
         </div>
       </div>
       <div className="flex select flex-col gap-2  py-3">
-          <button onClick={()=>setIndex(6)}  className={ index == 6 && "selected"}>
+          <button onClick={()=>{setIndex(6) ; navigate("/main/settings")}}  className={ index == 6 && "selected"}>
             الاعدادات <IoSettingsOutline />
+            
           </button>
    
         </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import General from "./General";
+import AccountSettings from "./AccountSettings";
 
 function Settings() {
   const navigate = useNavigate();
@@ -15,8 +16,10 @@ function Settings() {
         <button onClick={()=>setCurrent(!current)} className={`font-medium ${current ? cls : "text-gray-400"}`}>المعلومات العامة</button>
         <button onClick={()=>setCurrent(!current)} className={`font-medium ${!current ? cls : "text-gray-400"}`}>اعدادات الحساب</button>
       </div>
-     <div className="w-full  flex items-center h-fit mt-5 justify-center">
-            <General/> 
+     <div className="w-full  flex items-center  mt-5 justify-center">
+     <div className="w-2xl ">
+            {current ? <General/>  : <AccountSettings/> }
+     </div>
      </div>
     </>
   );

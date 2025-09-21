@@ -2,9 +2,9 @@ import React from "react";
 
 export default function General() {
   return (
-    <div className="w-2xl">
+    <>
       <div className="bg-gray-100 flex flex-col gap-3 p-5 mb-5 rounded-md">
-        <h1 className="text-2xl font-bold"> معلومات الدخول و اعدادات الأمان</h1>
+        <h1 className="text-xl font-bold"> معلومات الدخول و اعدادات الأمان</h1>
         <p className="text-gray-500 font-medium">
           يمكنك من هنا تعديل بيانات الدخول الخاصة بك و تحديث كلمة المرور لضمان
           حماية حساب المؤسسة
@@ -67,7 +67,7 @@ export default function General() {
       </form>
   
 
-    </div>
+    </>
   );
 }
 

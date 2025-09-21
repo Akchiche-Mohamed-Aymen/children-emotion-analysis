@@ -10,7 +10,8 @@ button{
     @apply cursor-pointer
 }
 body {
-    @apply bg-gray-200
+    @apply bg-gray-200;
+   
 }
 .select button , .add button{
     @apply flex flex-row-reverse justify-end py-3 font-medium items-center  gap-2
@@ -21,3 +22,15 @@ body {
 label{
     @apply font-medium
 } 
+.menu{
+    margin-right: 288px;
+} 
+.desc div{
+    @apply flex items-center justify-between p-1 gap-4  bg-gray-50 rounded-md mt-1;
+    p{
+        @apply text-gray-600
+    }
+    h2{
+        @apply font-bold
+    }
+}

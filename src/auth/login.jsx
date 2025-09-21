@@ -51,6 +51,7 @@ function Login() {
           {/* Submit button */}
           <button
             type="submit"
+            onClick={()=>navigate("/main")}
             className="w-full py-2 rounded-lg bg-sky-600 text-white font-medium shadow-md hover:bg-sky-800 focus:outline-none focus:ring-4 focus:ring-sky-200 transition"
           >
             تسجيل الدخول

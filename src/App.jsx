@@ -6,6 +6,7 @@ import "./App.css";
 import { Routes, Route, Outlet, Navigate } from "react-router-dom";
 import FullApp from "./main/FullApp";
 import Settings from "./main/Settings";
+import Show from "./Recommandations/Show";
 
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
       <Route path="/" element={<Navigate to="/auth" replace />} />
       <Route path="/main" element={<FullApp/>}>
         <Route path="settings" element={<Settings/>} />
+      </Route>
+      <Route path="/recommandations" element={<FullApp/>}>
+        <Route index element={<Show/>} />
       </Route>
     </Routes>
   );
